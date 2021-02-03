@@ -12,7 +12,11 @@ body {
 }
 .app-container {
   width: 100%;
-  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .container_wrap {
   width: 100%;
@@ -25,12 +29,26 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 .container_wrap sub {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
+  margin: 0 50px;
+  text-align: center;
+}
+
+.forecast {
+  border-right: dashed;
+  margin: 0;
+  padding: 0;
+}
+.forecast:last-child {
+  border-right: none;
+}
+.forcast_iconId img {
+  width: 50%;
 }
 input::placeholder {
   font-family: "Rimouski", sans-serif;
@@ -44,7 +62,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 15px 15px;
+  padding: 10px 15px 15px;
 }
 
 header input {
@@ -66,11 +84,13 @@ header input:focus {
   background-color: rgba(255, 255, 255, 0.6);
 }
 .location .city {
+  padding: 5px;
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 5px;
 }
 .location .date {
+  padding: 5px;
   font-size: 16px;
 }
 .current .temp {
@@ -94,44 +114,29 @@ header input:focus {
   font-weight: 500;
   text-shadow: 0px 2px rgba(0, 0, 0, 0.4);
 }
-.forcast_iconId img {
-  width: 50%;
-}
 
 @media only screen and (max-width: 640px) {
   .container_wrap {
-    width: 100%;
-    height: 100%;
-    display: flex;
     flex-direction: column;
   }
-
-  .location .city {
-    font-size: 16px;
-  }
-  .location .date {
-    font-size: 12px;
-  }
-  .current .temp {
-    font-size: 72px;
-  }
-  .current .weather-description {
-    font-size: 16px;
-  }
-
   .current .hi-low {
     font-size: 12px;
   }
-  .forcast_iconId img {
-    width: 30%;
+  .iconId img {
+    width: 70%;
   }
 
-  .container_wrap main {
-    margin-bottom: 20px;
+  main {
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
-  .container_wrap sub {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  sub {
+    width: 100%;
+    min-height: 100%;
+    margin-bottom: 20px;
+    padding: 0 0 50%;
+  }
+  .forecast {
+    font-size: 10px;
   }
 }
