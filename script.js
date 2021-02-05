@@ -46,7 +46,6 @@ function loadCurrentPossionWeather(latitude, longitude){
 
 function getWeatherResults(search_input){
     let api_url=api.base_url+`forecast.json?q=${search_input}&days=3&key=${api.key}`;
-    console.log(api_url);
     notificationEl.style.display='none';
     fetch(api_url)
     .then(function(weather){
