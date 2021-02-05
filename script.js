@@ -1,6 +1,6 @@
 const api={
     key: 'aae6c1208cf04f6492d01510210402',
-    base_url: 'http://api.weatherapi.com/v1/'
+    base_url: 'https://api.weatherapi.com/v1/'
 }
 const search_box=document.querySelector(".search-box");
 const form = document.getElementById("form");
