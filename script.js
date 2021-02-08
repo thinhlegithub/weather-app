@@ -61,7 +61,7 @@ function displayResults(weather){
     city.innerText = `${weather.location.name}, ${weather.location.country}`;
 
     let temp=document.querySelector(".temp");
-    temp.innerHTML=`${Math.round(weather.current.temp_c)}<span>°c</span>`;
+    temp.innerHTML=`${Math.floor(weather.current.temp_c)}<span>°c</span>`;
 
     let iconId=document.querySelector(".iconId");
     iconId.innerHTML=`<img src="${weather.current.condition.icon}" />`;
